@@ -1,0 +1,58 @@
+This program is copyright BlackStorm Software 2004 - 2010
+
+If you wish to use this program or use large quantites of code for some reason please contact me,
+This code is all of my own except the MD5 class, which still contains the authors original details
+and his copyright information. 
+
+This program is not even in beta stage and is a fair way off of it, but I'm posting to get some 
+ideas or a little discussion with other programmers as to where I could speed it up or make things
+better. This has been a pretty big project and have not had a great deal of time lately to continue
+so not much progress has been made in the past 4 months, but come next break I will hope to do much
+more on it.
+
+So here is the run down of what can you do;
+	- Make tables
+		- Set column properties
+		- Set some validation rules (these are not all working currently)
+		- Set MD5 password feilds
+		
+	- View talbes
+		- View properties of a table and total size and set ReadOnly on table
+
+	- Export tables in XML format (hopefully soon will also have HTML function)
+
+	- Run SQL queries on the tables 
+		Usable syntax
+		- SELECT, FROM, WHERE
+		- Count(*), *
+		
+		SQL structure
+		- all feilds in SELECT statment must have the table name with is ie [Phone Book]![Age]
+		- Currently only one Table queries work so one table in the FROM statment only ie [Phone Book]
+		- Currently there is not option for AND NOT OR in the where statment
+	
+	Example queries inlcude
+	
+	<SQL To select all feilds and records from the Phone Book Table>
+		SELECT *
+		FROM [Phone Book]
+	</SQL>
+
+	<SQL To select the age of a person whose name is "James">
+		SELECT [Phone Book]![Age]
+		FROM [Phone Book]
+		WHERE [Phone Book]![Name]="James"
+	</SQL>
+	
+	<SQL To count the total number of people in the Phone Book table>
+		SELECT COUNT(*)
+		FROM [Phone Book]
+	</SQL>
+
+	<SQL To count the total number of people in the Phone Book table>
+		SELECT *
+		FROM [Phone Book]
+		WHERE [Phone Book]![Age]=14
+	</SQL>
+	
+	Well thats most of the stuff
